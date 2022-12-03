@@ -28,7 +28,6 @@ describe('b', () => {
   test('puzzle', () => {
     const output = b(puzzleInput)
 
-    console.log('answer: ', output)
     expect(output).not.toBe(9539)
     expect(output).toBeGreaterThan(9539)
     expect(output).toBe(12091)

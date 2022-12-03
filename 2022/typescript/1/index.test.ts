@@ -14,7 +14,6 @@ describe('a', () => {
   test('puzzle', () => {
     const output = a(puzzleInput)
 
-    console.log('answer: ', output)
     expect(output).toBe(67450)
   })
 })
@@ -29,7 +28,6 @@ describe('b', () => {
   test('puzzle', () => {
     const output = b(puzzleInput)
   
-    console.log('answer: ', output)
     expect(output).not.toBe(38288)
     expect(output).toBe(199357)
   })

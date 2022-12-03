@@ -14,6 +14,7 @@ describe('a', () => {
   test('puzzle', () => {
     const output = a(puzzleInput)
 
+    console.log('answer: ', output)
     // expect(output).toBe(1)
   })
 })
@@ -28,6 +29,7 @@ describe('b', () => {
   test('puzzle', () => {
     const output = b(puzzleInput)
 
+    console.log('answer: ', output)
     // expect(output).toBe(1)
   })
 })

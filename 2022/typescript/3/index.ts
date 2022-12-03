@@ -1,7 +1,7 @@
 
 const priorityString = '-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-export function a(input: string): number {
+export function part1(input: string): number {
   return input.split('\n').map(rucksackInput => {
     const rucksack = rucksackInput.split('')
     const half = Math.ceil(rucksack.length / 2)
@@ -14,11 +14,12 @@ export function a(input: string): number {
   .reduce((a, b) => a + b, 0)
 }
 
-export function b(input: string): number {
+export function part2(input: string): number {
   return input.match(/(?:^.*$\n?){1,3}/mg)!
     .map(groupInput => {
-      const [firstRucksackInput, secondRucksackInput, thirdRucksackInput] = groupInput.split('\n').slice(0, 3)
-      const [firstRucksack, secondRucksack, thirdRucksack] = [firstRucksackInput, secondRucksackInput, thirdRucksackInput].map(rucksackInput => rucksackInput.split(''))
+      const [firstRucksack, secondRucksack, thirdRucksack] = groupInput.split('\n')
+        .slice(0, 3)
+        .map(rucksackInput => rucksackInput.split(''))
       // find the shared item
       const sharedItem = firstRucksack.find(item => secondRucksack.includes(item) && thirdRucksack.includes(item))!
       const priority = priorityString.indexOf(sharedItem)

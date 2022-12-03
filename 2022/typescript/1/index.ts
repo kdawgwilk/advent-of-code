@@ -9,7 +9,7 @@ Array.prototype.log = function (label?: string) {
   return this
 }
 
-export function a(input: string): number {
+export function part1(input: string): number {
   const calorieCounts = input
     .split('\n\n')
     .map(line =>
@@ -22,7 +22,7 @@ export function a(input: string): number {
   return maxCalories
 }
 
-export function b(input: string): number {
+export function part2(input: string): number {
   const maxCalories = input
     .split('\n\n')
     .map(line =>

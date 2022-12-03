@@ -62,7 +62,7 @@ function roundOutcome(opponentMove: Move, myMove: Move): RoundOutome {
   }
 }
 
-export function a(input: string): number {
+export function part1(input: string): number {
   return input.split('\n')
     .map(line => {
       const [opponentMove, myMove] = line.split(' ')
@@ -72,7 +72,7 @@ export function a(input: string): number {
     .reduce((acc, round) => acc + round, 0)
 }
 
-export function b(input: string): number {
+export function part2(input: string): number {
   return input.split('\n')
     .map(line => {
       const [opponentMoveInput, outcomeInput] = line.split(' ') as ['A' | 'B' | 'C', 'X' | 'Y' | 'Z']

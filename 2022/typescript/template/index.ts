@@ -1,8 +1,8 @@
 
-export function a(input: string): number {
+export function part1(input: string): number {
   return 0
 }
 
-export function b(input: string): number {
+export function part2(input: string): number {
   return 0
 }

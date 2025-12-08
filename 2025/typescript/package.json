@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "author": "kdawgwilk",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test": "node --test --experimental-strip-types --experimental-test-module-mocks"
+  },
   "private": true,
   "type": "module",
   "engines": {
